@@ -1,0 +1,691 @@
+{
+  "kind": "live authored microtask development check",
+  "recorded_at_utc": "2026-10-02T17:01:03.611617+00:00",
+  "fixture_sha256": "95f92c585a454873b06e6cb3b0b53567f72552084df63f8080785eb991fde59f",
+  "evaluator_sha256": "6dfbd32a9877badbc23d70f6ef7f38b16c7ac1a86ec69e1bc5860c1dc2137991",
+  "request": {
+    "temperature": 0,
+    "max_tokens": 512,
+    "timeout_seconds": 30
+  },
+  "accepted": 26,
+  "attempts": 40,
+  "infrastructure_failures": 0,
+  "limitations": [
+    "Authored public-answer-key cases; heldout is not blind.",
+    "Shared endpoint with simultaneous inference smoke work; hardware, weights, build, cache state and background load not pinned.",
+    "Strict structured grading; no raw answers retained for independent semantic adjudication.",
+    "No broad capability, safety, ranking, or comparative performance claim."
+  ],
+  "results": [
+    {
+      "accepted": true,
+      "answer_sha256": "810b3ef2587d6cfea15231209af949986aa551071ffbb58ffcfa0b5316bf6205",
+      "case_id": "ret-01",
+      "category": "retrieval",
+      "elapsed_s": 4.031479,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "86ec00b055625a91cec85e3178d082700e2b68a100a974c1c546a7eaa3009902",
+      "case_id": "ret-02",
+      "category": "retrieval",
+      "elapsed_s": 4.466397,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "answer"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "5a16230c0e4bef990b61a2f7c3d918c91250631044bced3d2b508f279ef8712b",
+      "case_id": "ret-03",
+      "category": "retrieval",
+      "elapsed_s": 4.931234,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "8530b524f485f6574617ab4d7eedd01de8742d037d2665b854b6d17c7fb95fcb",
+      "case_id": "ret-04",
+      "category": "retrieval",
+      "elapsed_s": 2.862666,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "da63c78a22a97ff432731789c30ed489f99204d68b7a4394e0a40f122863ef26",
+      "case_id": "ret-05",
+      "category": "retrieval",
+      "elapsed_s": 2.316005,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "873f6f8830a4e5de4398131b9aab2ed9e9e704c8b89de43d0707bda9746885c6",
+      "case_id": "ret-06",
+      "category": "retrieval",
+      "elapsed_s": 2.459631,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "answer"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "5a16230c0e4bef990b61a2f7c3d918c91250631044bced3d2b508f279ef8712b",
+      "case_id": "ret-07",
+      "category": "retrieval",
+      "elapsed_s": 2.168353,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "3a7fcc38be5a8459c09b3547735bc958f3f5beff84595e5b8d703ca0c009a7d6",
+      "case_id": "ret-08",
+      "category": "retrieval",
+      "elapsed_s": 2.467403,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "answer"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "heldout"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "ef07d8e3d5a796782eb65dcce9a7fa0e951b44d79fcb712e898f4691b25f482b",
+      "case_id": "ret-09",
+      "category": "retrieval",
+      "elapsed_s": 2.612107,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "answer"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "5a16230c0e4bef990b61a2f7c3d918c91250631044bced3d2b508f279ef8712b",
+      "case_id": "ret-10",
+      "category": "retrieval",
+      "elapsed_s": 2.250557,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "4320197104b81ec3aa7a569d7862a61f266b24103b41cbd570970a7f24806088",
+      "case_id": "lif-01",
+      "category": "lifecycle",
+      "elapsed_s": 3.53704,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "completed_items"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "e2a8919b4198b38b4bc14fb0ab0ce6c3ea5dddaebee121c7cbb9bb798ae0cf67",
+      "case_id": "lif-02",
+      "category": "lifecycle",
+      "elapsed_s": 2.290375,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "action"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "fcf4780f14166465dcc0eb004cabf5044c48e9ddcfd53edfe82dc63adca12a2b",
+      "case_id": "lif-03",
+      "category": "lifecycle",
+      "elapsed_s": 2.199435,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "f42088dcd66f2f61236a4cc9c45838efc14a649de8a974eb75dc804873521e63",
+      "case_id": "lif-04",
+      "category": "lifecycle",
+      "elapsed_s": 2.321518,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "d2b0bdaff0edd19b9129c4af35f8d626801757fc620e138c1b78739de435a33f",
+      "case_id": "lif-05",
+      "category": "lifecycle",
+      "elapsed_s": 2.321956,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "bb431ea3a8aa576ad447787ccaaa7366bac1c6af8d10597ca5234d96b93fe526",
+      "case_id": "lif-06",
+      "category": "lifecycle",
+      "elapsed_s": 2.811919,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "next_step"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "heldout"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "f9cbc4201e294b1a6c40cfac9eff20d0059a3519a4e8827da9fb3c92a4767a92",
+      "case_id": "lif-07",
+      "category": "lifecycle",
+      "elapsed_s": 2.352651,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "action"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "c1c9d06e990fa477e0218e98c2fb60f62d848d449bb388b0ced11d18380e8b83",
+      "case_id": "lif-08",
+      "category": "lifecycle",
+      "elapsed_s": 2.328011,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "3a9df54fb228d478d61075cb09659b5e04447a67b532ddb0dbcd44ade35d7c73",
+      "case_id": "lif-09",
+      "category": "lifecycle",
+      "elapsed_s": 2.254963,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "81036153c7d161f534bfe0c8f1dc7b52d358670b98caf09186e7243905faa470",
+      "case_id": "lif-10",
+      "category": "lifecycle",
+      "elapsed_s": 2.261074,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "75c4d9ce808e0132fa8137c3081fc5a3b59b8e5c4b6b58f1343dd88696126176",
+      "case_id": "eva-01",
+      "category": "evaluation",
+      "elapsed_s": 2.44983,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "d9e0f3dcc865ed9c4330a95d8a26a8c52b6198a48cdb9c1ceffc7a0cf5f50bc5",
+      "case_id": "eva-02",
+      "category": "evaluation",
+      "elapsed_s": 2.287853,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "70f2c6fdd47965e1059748c09bfc78d8549cc72a13fd86b392a29842eb0a72d3",
+      "case_id": "eva-03",
+      "category": "evaluation",
+      "elapsed_s": 2.539719,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "f915ee007cc7894a814887ed65d536d50eb2b65523dcba061dfa52b9f0bfd983",
+      "case_id": "eva-04",
+      "category": "evaluation",
+      "elapsed_s": 2.440111,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "evaluation_type"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "c35a469d6b3d3012617cd1cb6a2b10f169334edf8a30aaf89e807eb963d33489",
+      "case_id": "eva-05",
+      "category": "evaluation",
+      "elapsed_s": 2.227465,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "49210a40652f3d5eda0b30e8d7ba02353ca6df3b7cdc1c1f7e5b492a947466b8",
+      "case_id": "eva-06",
+      "category": "evaluation",
+      "elapsed_s": 2.718492,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "current_role",
+          "next_step"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "436acb125320e5ad5b81fa0e47ba11f4b6538896e6b00f211b8fc3c4e779e0d2",
+      "case_id": "eva-07",
+      "category": "evaluation",
+      "elapsed_s": 2.422218,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "02df800acfe9ce6794bd3574cd629add18bf6f5d1ea23425cd48cec14ee7815d",
+      "case_id": "eva-08",
+      "category": "evaluation",
+      "elapsed_s": 2.486277,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "4fb2677da417d3a8ee2bd28d8c4e79763d7e983b5edc7711428b167bf2917309",
+      "case_id": "eva-09",
+      "category": "evaluation",
+      "elapsed_s": 2.554507,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "b6c3422f73b800533b7f1a84f66a11ff1e31f24c9163b1061d3bfe4bf1b50b9d",
+      "case_id": "eva-10",
+      "category": "evaluation",
+      "elapsed_s": 2.635765,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "ae98e784f87acf5bef4481e7a5895e938cbeb269ec27b8729ccc0ea68b0d0510",
+      "case_id": "inf-01",
+      "category": "inference",
+      "elapsed_s": 2.484426,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "f471225082f75e14df549dfdcbdb3ed04d1b5c6ddd374190f9f2f3b03a32aae2",
+      "case_id": "inf-02",
+      "category": "inference",
+      "elapsed_s": 2.498129,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "a52fb4089a18a34cd24a46dd581ac04f2e96c7c1cb5e0b667297e9412bf0eeb5",
+      "case_id": "inf-03",
+      "category": "inference",
+      "elapsed_s": 2.375934,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "eeeadc726dd450c831efa2b75b31385b006e35157b59b1c7dc1467a9a6bbb9da",
+      "case_id": "inf-04",
+      "category": "inference",
+      "elapsed_s": 2.461561,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "readiness"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "f41ceb6d0e7b21fb9a161b1f454adac420bd4e1ffd51b4a60c4425c99f325579",
+      "case_id": "inf-05",
+      "category": "inference",
+      "elapsed_s": 2.4234,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "status"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "development"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "2e06c9c8e0ab35f8af39333c057e497d10072319b92b5fdb926a9b54f25d1499",
+      "case_id": "inf-06",
+      "category": "inference",
+      "elapsed_s": 3.131601,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "reason"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "566b214392f1921384059de2d44b517ef509c14289c0c13e8dc75fd822a61014",
+      "case_id": "inf-07",
+      "category": "inference",
+      "elapsed_s": 2.465253,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "2a3aa1ab92904ea34f3fa78f4e17de0f1ac491a232f0f77049b2f170e381bb7f",
+      "case_id": "inf-08",
+      "category": "inference",
+      "elapsed_s": 2.504344,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": true,
+      "answer_sha256": "5dc568d8916e128b57df4c221711dd06cac6290442df6d8bab7310eff2088cfb",
+      "case_id": "inf-09",
+      "category": "inference",
+      "elapsed_s": 2.733204,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": []
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "accepted",
+      "split": "heldout"
+    },
+    {
+      "accepted": false,
+      "answer_sha256": "ccbe56d95758f9aced6caaa2b8b99794b258a5972f9024b8f923919c65cc3888",
+      "case_id": "inf-10",
+      "category": "inference",
+      "elapsed_s": 2.582042,
+      "grade": {
+        "extra_count": 0,
+        "missing": [],
+        "wrong": [
+          "report_quality"
+        ]
+      },
+      "infrastructure_failure": false,
+      "model": "halogen-qwen3.8-flash-next",
+      "outcome": "wrong-answer",
+      "split": "heldout"
+    }
+  ]
+}

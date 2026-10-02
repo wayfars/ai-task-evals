@@ -1,0 +1,24 @@
+# Local reports and credentials.
+results/
+backup/
+backups/
+logs/
+screenshots/
+transcripts/
+*.jsonl
+*.bak
+*.backup
+.env
+.env.*
+!.env.example
+
+# Python generated files and environments.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

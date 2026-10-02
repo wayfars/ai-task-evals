@@ -1,0 +1,406 @@
+[
+  {
+    "case_id": "ret-01",
+    "split": "development",
+    "category": "retrieval",
+    "prompt": "Notes: [A] The batch export runs at 02:00 UTC. [B] The audit runs weekly on Friday. Asked: when does the export run? Return answer and evidence_id.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "02:00 UTC",
+      "evidence_id": "A"
+    }
+  },
+  {
+    "case_id": "ret-02",
+    "split": "development",
+    "category": "retrieval",
+    "prompt": "Notes: [A] Reports are retained for 14 days. [B] Backups are retained for 30 days. Asked: report retention? Return answer and evidence_id.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "14 days",
+      "evidence_id": "A"
+    }
+  },
+  {
+    "case_id": "ret-03",
+    "split": "development",
+    "category": "retrieval",
+    "prompt": "Notes: [A] The staging queue is named amber. [B] Amber is not the production queue. Asked: what is the production queue named? Return answer and evidence_id; use answer=unknown and evidence_id=null if absent.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "unknown",
+      "evidence_id": null
+    }
+  },
+  {
+    "case_id": "ret-04",
+    "split": "development",
+    "category": "retrieval",
+    "prompt": "Notes: [A] The owner approved the change on 2026-04-11. [B] The change was deployed on 2026-04-13. Asked: approval date? Return answer and evidence_id.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "2026-04-11",
+      "evidence_id": "A"
+    }
+  },
+  {
+    "case_id": "ret-05",
+    "split": "development",
+    "category": "retrieval",
+    "prompt": "Notes: [A] Retry limit is 2 attempts. [B] Backoff is 5 seconds. Asked: backoff duration? Return answer and evidence_id.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "5 seconds",
+      "evidence_id": "B"
+    }
+  },
+  {
+    "case_id": "ret-06",
+    "split": "heldout",
+    "category": "retrieval",
+    "prompt": "Notes: [A] The index refresh is manual. [B] Search requests are read-only. Asked: is index refresh automatic? Return answer and evidence_id.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "No",
+      "evidence_id": "A"
+    }
+  },
+  {
+    "case_id": "ret-07",
+    "split": "heldout",
+    "category": "retrieval",
+    "prompt": "Notes: [A] The service supports JSON and CSV. [B] XML support is not documented. Asked: is XML supported? Return answer and evidence_id; use unknown if absent.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "unknown",
+      "evidence_id": null
+    }
+  },
+  {
+    "case_id": "ret-08",
+    "split": "heldout",
+    "category": "retrieval",
+    "prompt": "Notes: [A] Escalations go to the on-call role. [B] The on-call role responds within one business hour. Asked: expected response target? Return answer and evidence_id.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "one business hour",
+      "evidence_id": "B"
+    }
+  },
+  {
+    "case_id": "ret-09",
+    "split": "heldout",
+    "category": "retrieval",
+    "prompt": "Notes: [A] The cache expires after 600 seconds. [B] A refresh request invalidates it immediately. Asked: normal cache expiry? Return answer and evidence_id.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "600 seconds",
+      "evidence_id": "A"
+    }
+  },
+  {
+    "case_id": "ret-10",
+    "split": "heldout",
+    "category": "retrieval",
+    "prompt": "Notes: [A] The read replica is in region north-2. [B] The primary region is not listed. Asked: where is the primary? Return answer and evidence_id; use unknown if absent.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "answer": "unknown",
+      "evidence_id": null
+    }
+  },
+  {
+    "case_id": "lif-01",
+    "split": "development",
+    "category": "lifecycle",
+    "prompt": "Run ended without a handoff. Durable run state is available. Rule: never claim unverified work; recover with a skeleton and inspect next. Return action and completed_items.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "action": "write_recovery_handoff",
+      "completed_items": []
+    }
+  },
+  {
+    "case_id": "lif-02",
+    "split": "development",
+    "category": "lifecycle",
+    "prompt": "Two consecutive sessions exited without handoffs; pause threshold is 3. Rule: continue with bounded recovery until threshold. Return action and failure_count.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "action": "retry_with_skeleton_handoff",
+      "failure_count": 2
+    }
+  },
+  {
+    "case_id": "lif-03",
+    "split": "development",
+    "category": "lifecycle",
+    "prompt": "Three consecutive sessions exited without handoffs; threshold is 3. Rule: pause and require a person. Return action and requires_human.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "action": "pause",
+      "requires_human": true
+    }
+  },
+  {
+    "case_id": "lif-04",
+    "split": "development",
+    "category": "lifecycle",
+    "prompt": "A goal is paused after repeated failures. An automated worker asks to resume without human input. Return action and authorized.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "action": "remain_paused",
+      "authorized": false
+    }
+  },
+  {
+    "case_id": "lif-05",
+    "split": "development",
+    "category": "lifecycle",
+    "prompt": "A prior run left next step \"check generated manifest\" and did not complete it. Return next_step and claim_complete.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "next_step": "check generated manifest",
+      "claim_complete": false
+    }
+  },
+  {
+    "case_id": "lif-06",
+    "split": "heldout",
+    "category": "lifecycle",
+    "prompt": "A handoff says completed=[\"unit tests\"] but the independent test command failed. Rule: evidence overrides claim. Return status and next_step.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "status": "not_verified",
+      "next_step": "diagnose failing tests"
+    }
+  },
+  {
+    "case_id": "lif-07",
+    "split": "heldout",
+    "category": "lifecycle",
+    "prompt": "The worker process crashed, but the backend health check is unavailable. The policy treats unknown liveness as unknown, not idle. Return liveness and action.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "liveness": "unknown",
+      "action": "preserve_context_and_escalate"
+    }
+  },
+  {
+    "case_id": "lif-08",
+    "split": "heldout",
+    "category": "lifecycle",
+    "prompt": "A task can be resumed using the same session id and saved handoff; no new context is needed. Return resume_mode and context_source.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "resume_mode": "resume",
+      "context_source": "saved_handoff"
+    }
+  },
+  {
+    "case_id": "lif-09",
+    "split": "heldout",
+    "category": "lifecycle",
+    "prompt": "A required dependency is unavailable. No retry budget remains. Rule: do not repeatedly restart; leave a handoff. Return action and retries.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "action": "handoff_and_stop",
+      "retries": 0
+    }
+  },
+  {
+    "case_id": "lif-10",
+    "split": "heldout",
+    "category": "lifecycle",
+    "prompt": "The goal check passes and the result is independently verified. Return terminal_state and launch_another_session.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "terminal_state": "accomplished",
+      "launch_another_session": false
+    }
+  },
+  {
+    "case_id": "eva-01",
+    "split": "development",
+    "category": "evaluation",
+    "prompt": "One fixed task was repeated 20 times with identical inputs. What is the independent task count? Return independent_tasks and inference.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "independent_tasks": 1,
+      "inference": "repeats_are_not_distinct_tasks"
+    }
+  },
+  {
+    "case_id": "eva-02",
+    "split": "development",
+    "category": "evaluation",
+    "prompt": "A request timed out before a response arrived. Score the semantic result and classify the event. Return accepted and outcome.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "accepted": false,
+      "outcome": "infrastructure_failure"
+    }
+  },
+  {
+    "case_id": "eva-03",
+    "split": "development",
+    "category": "evaluation",
+    "prompt": "Two systems each pass 8 of 8 easy cases. The set contains no difficult cases. Return comparison and limitation.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "comparison": "tie_on_observed_cases",
+      "limitation": "ceiling_effect_prevents_quality_discrimination"
+    }
+  },
+  {
+    "case_id": "eva-04",
+    "split": "development",
+    "category": "evaluation",
+    "prompt": "A router chooses the fastest observed result per task using results from those same tasks. Return evaluation_type and bias_risk.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "evaluation_type": "matched_offline_replay",
+      "bias_risk": "selection_on_observed_results"
+    }
+  },
+  {
+    "case_id": "eva-05",
+    "split": "development",
+    "category": "evaluation",
+    "prompt": "The task prompt includes its expected answer. Return validity and primary_issue.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "validity": "invalid_for_blind_evaluation",
+      "primary_issue": "answer_leakage"
+    }
+  },
+  {
+    "case_id": "eva-06",
+    "split": "heldout",
+    "category": "evaluation",
+    "prompt": "A held-out set was used repeatedly to tune prompts and thresholds. Return current_role and next_step.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "current_role": "development_set",
+      "next_step": "collect_a_new_heldout_set"
+    }
+  },
+  {
+    "case_id": "eva-07",
+    "split": "heldout",
+    "category": "evaluation",
+    "prompt": "Model A is faster but has a higher severe-defect count. The predeclared rule vetoes any severe defect. Return decision and basis.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "decision": "reject_under_current_rule",
+      "basis": "severe_defect_veto"
+    }
+  },
+  {
+    "case_id": "eva-08",
+    "split": "heldout",
+    "category": "evaluation",
+    "prompt": "Run order puts all requests for model A before all requests for B while a shared server cache warms. Return risk and mitigation.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "risk": "order_and_cache_confounding",
+      "mitigation": "randomize_or_block_and_report_order"
+    }
+  },
+  {
+    "case_id": "eva-09",
+    "split": "heldout",
+    "category": "evaluation",
+    "prompt": "A score report omits failed attempts from its denominator. Return metric_status and correction.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "metric_status": "biased",
+      "correction": "include_all_attempts_and_separate_infrastructure_failures"
+    }
+  },
+  {
+    "case_id": "eva-10",
+    "split": "heldout",
+    "category": "evaluation",
+    "prompt": "A pilot observes zero failures in eight trials. Return conclusion and uncertainty.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "conclusion": "no_failures_observed_in_this_sample",
+      "uncertainty": "sample_is_too_small_to_estimate_rare_failure_rate"
+    }
+  },
+  {
+    "case_id": "inf-01",
+    "split": "development",
+    "category": "inference",
+    "prompt": "Server A decodes 80 tokens/s but emits 5x as many tokens as B; A has longer end-to-end latency. Which metric decides user speed? Return metric and conclusion.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "metric": "end_to_end_latency",
+      "conclusion": "higher_decode_rate_did_not_make_this_task_faster"
+    }
+  },
+  {
+    "case_id": "inf-02",
+    "split": "development",
+    "category": "inference",
+    "prompt": "Cold model load takes 18 seconds; warm requests average 4 seconds. Report them separately. Return cold_load_s and warm_request_s.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "cold_load_s": 18,
+      "warm_request_s": 4
+    }
+  },
+  {
+    "case_id": "inf-03",
+    "split": "development",
+    "category": "inference",
+    "prompt": "A benchmark changes quantization and context length at the same time. Return experiment_quality and fix.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "experiment_quality": "confounded",
+      "fix": "change_one_factor_per_comparison"
+    }
+  },
+  {
+    "case_id": "inf-04",
+    "split": "development",
+    "category": "inference",
+    "prompt": "Backend reports loaded but a minimal generation probe times out. Return readiness and next_action.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "readiness": "unproven",
+      "next_action": "record_probe_failure_and_do_not_route_work"
+    }
+  },
+  {
+    "case_id": "inf-05",
+    "split": "development",
+    "category": "inference",
+    "prompt": "A speculative decoding flag is enabled but acceptance is zero. Return status and action.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "status": "not_engaged",
+      "action": "disable_or_investigate_before_claiming_speedup"
+    }
+  },
+  {
+    "case_id": "inf-06",
+    "split": "heldout",
+    "category": "inference",
+    "prompt": "The local server is already serving an unknown workload. A benchmark would stop it to load another model. Return action and reason.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "action": "abort_benchmark",
+      "reason": "do_not_disrupt_unknown_active_workload"
+    }
+  },
+  {
+    "case_id": "inf-07",
+    "split": "heldout",
+    "category": "inference",
+    "prompt": "Throughput improves under one client, but aggregate throughput under concurrent clients is unmeasured. Return claim and missing_measurement.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "claim": "single_client_result_only",
+      "missing_measurement": "concurrent_aggregate_throughput"
+    }
+  },
+  {
+    "case_id": "inf-08",
+    "split": "heldout",
+    "category": "inference",
+    "prompt": "A model uses less memory but its answers fail exact acceptance checks. Return suitability and joint_measurement.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "suitability": "not_acceptable_for_this_task",
+      "joint_measurement": "quality_and_resource_cost"
+    }
+  },
+  {
+    "case_id": "inf-09",
+    "split": "heldout",
+    "category": "inference",
+    "prompt": "The result records token rate but not model revision, prompt, or decoding settings. Return reproducibility and missing_fields.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "reproducibility": "insufficient",
+      "missing_fields": [
+        "model_revision",
+        "prompt",
+        "decoding_settings"
+      ]
+    }
+  },
+  {
+    "case_id": "inf-10",
+    "split": "heldout",
+    "category": "inference",
+    "prompt": "Latency is measured only for successful requests; timeouts are omitted. Return report_quality and required_handling.\n\nReturn exactly one JSON object with the listed fields and values requested by the task. Do not use outside knowledge. If the evidence is insufficient, say so explicitly in the requested fields.",
+    "expected": {
+      "report_quality": "incomplete",
+      "required_handling": "include_timeouts_as_failures_and_report_separately"
+    }
+  }
+]
